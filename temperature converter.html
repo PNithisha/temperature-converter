@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <script>
+        function tempConverter1(){
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n2 = n1*1.8+32;
+            document.getElementById("n2").value = n2;
+        }
+        function tempConverter2(){
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n3= (n1-32)*0.5555;
+            document.getElementById("n2").value = n3;
+        }
+        function tempConverter3(){
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n4= n1+273.15;
+            document.getElementById("n2").value = n4;
+        }
+        function tempConverter4(){
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n5= n1-273.15;
+            document.getElementById("n2").value = n5;
+        }
+        function tempConverter5(){
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n6= (n1-32)*(5/9)+273.15;
+            document.getElementById("n2").value = n6;
+        }
+        function tempConverter6(){
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n7= (n1-273.15)*1.8+32;
+            document.getElementById("n2").value = n7;
+        }
+    </script>
+    <style>
+        #body {
+            background-color: rgb(117, 163, 228);
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-simple-atmospheric-blue-temperature-needle-illustration-background-image_279280.jpg');
+        }
+        #divison {
+            background-color: rgb(36, 216, 229);
+            width: 350px;
+            height: 200px;
+            margin: 250px auto;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="divison">
+    <h2 style="text-align: center; background-color: rgb(242, 163, 236);">Temperature Converter</h2><br>
+        <label for="n1">Enter temperature: </label>
+        <input type="text" id="n1"/><br/>
+        <button onclick="tempConverter1()">C to F</button>
+        <button onclick="tempConverter2()">F to C</button>
+        <button onclick="tempConverter3()">C to K</button><br/>
+        <button onclick="tempConverter4()">K to C</button>
+        <button onclick="tempConverter5()">F to K</button>
+        <button onclick="tempConverter6()">K to F</button><br/>
+        <label for="n2">Result</label>
+        <input type="text" id="n2" readonly /><br/>
+    </div>
+</body>
+</html>
